@@ -1,0 +1,24 @@
+
+<div class="row">		
+	<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 ">
+		<div class="well myWell" >
+		<form class="form-horizontal" name="myForm" ng-submit="login()">
+			<div class="form-group">
+				<label for="login" class="myLable">Please Log in</label><br/><br/>
+				<input class="form-control" ng-model="iPadName" type="text" id="iPadName"/>
+				<br/><br/>
+
+				<select id="stationName" name="stationName" class="selectpicker show-tick form-control" ng-model="stationName" >
+	                <option value="Station Name" selected>Station Name</option>
+	                <option ng-repeat="stationName in stationNames" value="{{stationName}}">{{stationName}}</option> 
+                </select>
+                <br/><br/>
+
+			    <input class="form-control" placeholder="Password" type="Password" id="Password" ng-model="password"/><br/><br/>
+
+			    <button type="submit" class="btn btn-primary myButton" id="btnSignIn">{{btnName}}</button>
+			</div>			
+		</form>
+		</div>
+	</div>
+</div>

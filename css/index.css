@@ -1,0 +1,35 @@
+﻿.myWell{
+	text-align:center;
+	background: white;
+	border-color: #428bca;
+	padding: 50px;
+	margin-top: 50px;
+}
+.myButton{
+	width: 100%;
+}
+
+.myDropDown{
+	text-align:left;
+	width: 100%;
+}
+
+.myCaret{
+	float:right;
+	margin-top: 7px;
+}
+
+.myDropDownMenu{
+	background: #428bca;
+}
+
+.myLable{
+	font-size: 20px;
+	color: #428bca;
+}
+
+
+.myLable2{
+	font-size: 15px;
+	color: #428bca;
+}

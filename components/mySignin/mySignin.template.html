@@ -1,0 +1,21 @@
+
+<div class="row">		
+	<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 ">
+		<div class="well myWell" >
+		<form class="form-horizontal" name="myForm" ng-submit="signin()">
+			<div class="form-group">
+				<label for="login" class="myLable">Sign in to WIN</label><br/><br/>
+				<input class="form-control" ng-model="idNumber" type="text" id="idNumber"/>
+				<br/>
+
+				<label for="login" class="myLable2">OR</label><br/>
+
+				<input class="form-control" ng-model="email" type="text" id="email"/>
+				<br/><br/>
+
+			    <button type="submit" class="btn btn-primary myButton" id="btnSignIn">{{btnName}}</button>
+			</div>			
+		</form>
+		</div>
+	</div>
+</div>
