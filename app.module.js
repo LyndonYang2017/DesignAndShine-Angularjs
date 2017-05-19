@@ -4,5 +4,7 @@
 angular.module('designShineApp', [
   'ngRoute',
   'myLogin',
-  'mySignin'
+  'mySignin',
+  'myAnnoce',
+  'myRegister'
 ]);

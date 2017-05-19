@@ -3,10 +3,13 @@ angular.
   component('myLogin', {
       templateUrl: 'components/myLogin/myLogin.template.html',
       controller: ['$http', '$scope', '$location', function MyLoginController($http, $scope, $location) {
-        console.log("OK!");
+        //console.log("OK!");
 
         //get station Name array.
-        $scope.stationNames = new Array('Discovery Zone', 'HCS Talk');
+        $http.get('http://localhost/DSProject/api/DSStationName').then(function (response) {
+              $scope.stationNames = response.data;
+              //console.log($scope.stationNames);
+        });
         $scope.iPadName = "IPad Name";
         $scope.stationName = "Station Name"
         $scope.btnName = "Sign In";
@@ -35,10 +38,22 @@ angular.
 
         	$scope.btnName = "Loading...";
 
-        	//....
-        	$location.path("/signin")
-        }
-        
+            //console.log($scope.iPadName);
+            //console.log($scope.password);
+            //console.log($scope.stationName);
+            var url = "http://localhost/DSProject/api/DSLogin?iPadName=" + $scope.iPadName + "&password=" + $scope.password + "&stationName=" + $scope.stationName;
+            //console.log(url);
 
-      }]
+        	$http.get(url).then(function (response) {
+                $scope.login = response.data;
+                if ($scope.login.ID != 'undefined')
+                    $location.path("/signin");
+            }, function(response){
+                alert("Your iPad Name or passowrd is not correct!");
+                $scope.btnName = "Sing in";
+                $("#iPadName").focus();
+            });
+        }
+        	
+    }]
   });

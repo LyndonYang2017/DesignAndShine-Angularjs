@@ -1,4 +1,4 @@
 'use strict';
 
-// Define the `myLogin` module
+// Define the `mySignin` module
 angular.module('mySignin', []);

@@ -13,6 +13,12 @@ angular.
           when('/signin', {
               template: '<my-Signin></my-Signin>'
           }).
+          when('/annoce', {
+              template: '<my-Annoce></my-Annoce>'
+          }).
+          when('/register', {
+              template: '<my-Register></my-Register>'
+          }).
           otherwise('/login', {
               template: '<my-Login></my-Login>'
           });

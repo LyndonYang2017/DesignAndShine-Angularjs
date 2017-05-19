@@ -29,8 +29,18 @@ angular.
         	
         	$scope.btnName = "Loading...";
 
-        	//....
-        	$location.path("/myRegister")
+        	var url = "http://localhost/DSProject/api/DSSignin?IDNumber=" + $scope.idNumber + "&email=" + $scope.email;
+            //console.log(url);
+
+            $http.get(url).then(function (response) {
+                $scope.signin = response.data;
+                if ($scope.signin.ID != 'undefined')
+                    $location.path("/annoce");
+            }, function(response){
+                alert("Your ID Number or Email Address is not correct!");
+                $scope.btnName = "Sing in";
+                $("#idNumber").focus();
+            });
         }
         
 

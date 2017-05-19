@@ -1,0 +1,64 @@
+
+<div class="row">		
+	<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 ">
+		<div class="well myWell" >
+		<form class="form-horizontal" name="myForm" ng-submit="regist()">
+			<div class="form-group">
+				<label for="login" class="myLable3">Registration</label>
+				<br/>
+
+			    <input class="form-control" placeholder="First Name" type="text" id="firstName" ng-model="firstName"/>
+			    <br/>
+
+			    <input class="form-control" placeholder="Last Name" type="text" id="lastName" ng-model="lastName"/>
+			    <br/>
+
+			    <select id="diagnosis" name="diagnosis" class="selectpicker show-tick form-control" ng-model="diagnosis" >
+	                <option value="Diagnosis" selected="selected">Diagnosis</option>
+	                <option ng-repeat="diagnosis in diagnosisList" value="{{diagnosis.Diagnosis}}">{{diagnosis.Diagnosis}}</option> 
+                </select>
+                <br/>
+
+                <div class="row">
+                	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+	                	<input class="form-control" placeholder="Email" type="text" id="email" ng-model="email"/>
+	                </div>
+	                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+	                	<input class="form-control" placeholder="Mobile phone number" type="text" id="phone" ng-model="phone"/>
+	                </div>
+                </div>
+			    <br/>
+
+			    <select id="questions" name="questions" class="selectpicker show-tick form-control" ng-model="question" >
+	                <option value="Security Question" selected="selected">Security Question</option>
+	                <option ng-repeat="question in questions" value="{{question.Question}}">{{question.Question}}</option> 
+                </select>
+                <br/>
+
+                <input class="form-control" placeholder="Security Answer" type="text" id="answer" ng-model="answer"/>
+			    <br/>
+
+			    <div class="row">
+                	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+	                	<input class="form-control" placeholder="Password" type="password" id="password" ng-model="password"/>
+	                </div>
+	                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+	                	<input class="form-control" placeholder="Password Confirm" type="password" id="passwordconf" ng-model="passwordconf"/>
+	                </div>
+                </div>
+			    <br/>
+
+			    <label for="" class="myLable4">I agree that the information I am providing may be used by Novo Nordisk, its affiliates, or vendors to keep me informed about new products, services, special offers, or other opportunities that may be of interest to me, as they become available. Novo Nordisk my also combine the information I provide with information from third parties so as to better match these offers with my interests. THESE COMMUNICATIONS MAY CONTAIN MATERIAL MARKETING OR ADVERTISING NOVO NORDISK PRODUCTS, GOODS, OR SERVICES, Novo Nordisk will take appropriate measures to protect my information. I can stop Novo Nordisk from sending me future communications by calling 1-877-744-2579, sending a brief note with my name and address to Novo Nordisk at 800 Scudders Mill Road, Plainsboro, New Jersey, 08536, or by clicking on the "unsubscribe" like that will be available in future e-mail communications. By providing my information to Novo Nordisk and acknowledging below, I certify that I am at least eighteen (18) years of age.</label>
+			    <br /><br />
+
+			    <div class="checkbox">
+                    <label><input type="checkbox" value="agree" ng-model="agree"/>I agree with the terms and conditions</label>               
+                </div>
+                <br />
+
+			    <button type="submit" class="btn btn-primary myButton" id="btnRegist">{{btnName}}</button>
+			</div>			
+		</form>
+		</div>
+	</div>
+</div>
