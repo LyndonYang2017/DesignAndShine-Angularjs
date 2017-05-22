@@ -10,18 +10,33 @@ angular.
           when('/login', {
               template: '<my-Login></my-Login>'
           }).
-          when('/signin', {
+          when('/signin/:round', {
               template: '<my-Signin></my-Signin>'
           }).
-          when('/annoce', {
+          when('/annoce/:round', {
               template: '<my-Annoce></my-Annoce>'
           }).
-          when('/register', {
+          when('/register/:round', {
               template: '<my-Register></my-Register>'
+          }).
+          when('/success/:ID/:round', {
+              template: '<my-Success></my-Success>'
+          }).
+          when('/list/:round', {
+              template: '<my-List></my-List>'
           }).
           otherwise('/login', {
               template: '<my-Login></my-Login>'
           });
-
     }
-  ]);
+  ]).
+  service('commonService', function( $routeParams, $cookieStore, $location){
+    this.identification = function(scope){
+      scope.round = $routeParams.round;
+      scope.roundCookie = $cookieStore.get('roundValue');
+      if (scope.round != scope.roundCookie){
+          alert("The information of Login is not correct, please login again!");
+          $location.path("/login");
+      }
+    }
+  });

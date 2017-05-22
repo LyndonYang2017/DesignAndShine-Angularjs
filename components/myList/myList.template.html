@@ -1,0 +1,35 @@
+
+<div class="row">		
+	<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 ">
+		<div class="well myWell" >
+			<form class="form-horizontal" name="myForm" ng-submit="list()">
+			<div class="form-group">
+				<label for="login" class="myLable">Registration List</label><br/><br/>
+				<table class="table table-bordered table-hover table-condensed">
+	                <thead>
+	                    <tr>
+	                        <td>ID</td>
+	                        <td>First Name</td>
+	                        <td>Last Name</td>
+	                        <td>Email</td>
+	                    </tr>
+	                </thead>
+	                <tbody>
+	                    <tr ng-repeat="regist in registList" style="text-align: left">
+	                        <td>{{regist.ID}}</td>
+	                        <td>{{regist.FirstName}}</td>
+	                        <td>{{regist.LastName}}</td>
+	                        <td>{{regist.Email}}</td>
+	                    </tr>
+	                </tbody>
+	            </table>
+				
+                <br/><br/>
+
+			    <button type="submit" class="btn btn-primary myButton" id="btnList">{{btnList}}</button>
+			</div>			
+			</form>
+			
+		</div>
+	</div>
+</div>

@@ -3,8 +3,11 @@
 // Declare app level module 
 angular.module('designShineApp', [
   'ngRoute',
+  'ngCookies',
   'myLogin',
   'mySignin',
   'myAnnoce',
-  'myRegister'
+  'myRegister',
+  'mySuccess',
+  'myList'
 ]);
